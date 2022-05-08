@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "summercamp-29e83": {
+      "hosting": {
+        "summer-camp": [
+          "summercamp-29e83"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "summercamp-29e83"
+  }
+}

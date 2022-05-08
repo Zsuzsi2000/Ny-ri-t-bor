@@ -1,0 +1,14 @@
+<div class="component" fxFlex fxLayout fxLayoutGap="30px" fxLayoutAlign="space-around start">
+  <mat-card *ngFor="let camp of camps">
+    <mat-card-title>{{ camp?.topic }}</mat-card-title>
+    <mat-card-content>
+      <div>{{ camp?.description }}</div>
+      <div>
+        <span>{{ camp?.startDate }}</span>-<span>{{ camp?.endDate }}</span>
+      </div>
+      <div>Ár: <span>{{ camp?.price }}</span> Ft</div>
+      <div>{{ camp?.age_group }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

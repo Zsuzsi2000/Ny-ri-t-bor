@@ -1,0 +1,47 @@
+<div class="component">
+  <div>
+    <h1>Regisztráció egy táborra:</h1>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" id="regist">
+      <mat-form-field>
+        <mat-label for="email">Email: </mat-label>
+        <input matInput type="text" formControlName="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="password">Jelszó: </mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="rePassword">Jelszó újra: </mat-label>
+        <input matInput type="password" formControlName="rePassword" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="motherName">Édesanya neve: </mat-label>
+        <input matInput type="motherName" formControlName="motherName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="childName">Gyermek neve: </mat-label>
+        <input matInput type="childName" formControlName="childName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="childBirthday">Gyermek születési dátuma: </mat-label>
+        <input matInput type="childBirthday" formControlName="childBirthday" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="comment">Megjegyzés: </mat-label>
+        <input matInput type="comment" formControlName="comment" />
+      </mat-form-field>
+      <div>
+        <span>
+          <button mat-raised-button type="submit">Regisztráció</button>
+        </span>
+        <span>
+          <button mat-raised-button (click)="updateUser()">Frissítés</button>
+        </span>
+        <span>
+          <button mat-raised-button (click)="deleteUser()">Regisztráció törlése</button>
+        </span>
+      </div>
+      <div *ngIf="message!=''">{{ message }}</div>
+    </form>
+  </div>
+</div>
